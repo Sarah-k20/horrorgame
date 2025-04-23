@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/test">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_margin="16dp"
+        android:background="@drawable/para_bckg"
+        android:orientation="vertical"
+        android:padding="1dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/title_border"
+            android:fontFamily="@font/helpme"
+            android:text="Paramètres"
+            android:textColor="#ffffff"
+            android:textSize="28sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/helpme"
+            android:text="Volume"
+            android:textColor="#dddddd"
+            android:textSize="18sp" />
+
+        <SeekBar
+            android:id="@+id/seekBarVolume"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"
+            android:progressTint="#ECF0F1"
+            android:thumbTint="#FF0000" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/helpme"
+            android:text="Contrôles :"
+            android:textColor="#dddddd"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/helpme"
+            android:text="Utilisez le joystick à l'écran pour déplacer votre personnage.\nGlissez votre doigt dans la direction souhaitée."
+            android:textColor="#bbbbbb"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="71dp"
+            android:layout_height="34dp"
+            android:layout_gravity="start"
+            android:layout_marginTop="12dp"
+            android:contentDescription="joystick"
+            android:src="@drawable/joystick" />
+
+        <Button
+            android:id="@+id/btnRetour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#B3B6B7"
+            android:fontFamily="@font/helpme"
+            android:text="Retour"
+            android:textColor="#000000" />
+    </LinearLayout>
+</ScrollView>
