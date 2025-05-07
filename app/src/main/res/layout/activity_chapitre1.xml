@@ -1,0 +1,109 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bedroom3" />
+
+
+
+    <TextView
+        android:id="@+id/dialogueText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#AA000000"
+        android:textColor="#FFFFFF"
+        android:padding="16dp"
+        android:textSize="18sp"
+        android:text="..."
+        android:fontFamily="@font/helpme" />
+
+
+    <View
+        android:id="@+id/zoneCommode"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginStart="30dp"
+        android:background="@android:color/transparent" />
+
+
+    <TextView
+        android:id="@+id/inventaireText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="16dp"
+        android:text="Inventaire :"
+        android:textColor="#CCCCCC"
+        android:textSize="14sp"
+        android:fontFamily="@font/helpme" />
+
+
+    <TextView
+        android:id="@+id/presenceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:text="Vous êtes seul(e)."
+        android:textColor="#CCCCCC"
+        android:textSize="14sp"
+        android:fontFamily="@font/helpme" />
+
+
+    <TextView
+        android:id="@+id/horloge_heure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:text="03:10"
+        android:textColor="#888888"
+        android:textSize="12sp"
+        android:fontFamily="@font/helpme" />
+
+    <LinearLayout
+    android:id="@+id/inventaireLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@android:color/transparent">
+
+
+    <LinearLayout
+        android:id="@+id/itemCle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/cleIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/key" />
+
+        <TextView
+            android:id="@+id/cleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clé"
+            android:paddingStart="16dp"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+</LinearLayout>
+
+
+</RelativeLayout>

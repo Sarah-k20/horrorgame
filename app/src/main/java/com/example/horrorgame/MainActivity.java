@@ -42,6 +42,11 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, parametres.class);
             startActivity(intent);
         });
+        btnNewGame.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, Intro.class);
+            startActivity(intent);
+        });
+
 
 
         btnQuit.setOnClickListener(v -> finish());
