@@ -11,7 +11,7 @@ public class Intro extends Activity {
     private TextView introText;
     private String[] lines = {
             "...",
-            "Silence. Absolu.",
+            "Silence absolu.",
             "Vous ouvrez les yeux. L'obscurité vous entoure.",
             "Un plafond fissuré. Une odeur de poussière et d'humidité.",
             "Où êtes-vous ?",
@@ -42,7 +42,7 @@ public class Intro extends Activity {
             index++;
             handler.postDelayed(this::showNextLine, 3000); // 2,5 secondes par ligne
         } else {
-            // Transition vers Chapitre1
+
             Intent intent = new Intent(Intro.this, Chapitre1.class);
             startActivity(intent);
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);

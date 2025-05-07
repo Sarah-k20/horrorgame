@@ -10,8 +10,9 @@ public class Chapitre1 extends Activity {
 
     private TextView dialogueText, inventaireText, presenceText;
     private View zoneCommode;
+    private View zonePorte;
     private boolean aLaCle = false;
-    private LinearLayout itemCle; // Référence pour l'élément de l'inventaire
+    private LinearLayout itemCle;
     private LinearLayout inventaireLayout;
 
     @Override
@@ -24,7 +25,7 @@ public class Chapitre1 extends Activity {
         presenceText = findViewById(R.id.presenceText);
         zoneCommode = findViewById(R.id.zoneCommode);
         inventaireLayout = findViewById(R.id.inventaireLayout);
-        itemCle = findViewById(R.id.itemCle); // Récupère l'élément de la clé
+        itemCle = findViewById(R.id.itemCle);
 
         dialogueText.setText("La pièce est silencieuse...");
 
@@ -41,6 +42,19 @@ public class Chapitre1 extends Activity {
 
                 } else {
                     dialogueText.setText("Il n’y a plus rien dans la commode.");
+                }
+            }
+        });
+
+        zonePorte.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (aLaCle) {
+                    dialogueText.setText("La porte est ouverte.");
+
+
+                } else {
+                    dialogueText.setText("Vous ne pouvez pas ouvrir cette porte.");
                 }
             }
         });
