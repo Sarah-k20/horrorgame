@@ -10,49 +10,51 @@
         android:scaleType="centerCrop"
         android:src="@drawable/bedroom3" />
 
-
-
     <TextView
         android:id="@+id/dialogueText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="#AA000000"
-        android:textColor="#FFFFFF"
+        android:fontFamily="@font/helpme"
         android:padding="16dp"
-        android:textSize="18sp"
         android:text="..."
-        android:fontFamily="@font/helpme" />
+        android:textColor="#FFFFFF"
+        android:textSize="14sp" />
 
 
     <View
         android:id="@+id/zoneCommode"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="130dp"
+        android:layout_height="113dp"
+        android:layout_marginStart="0dp"
         android:layout_marginTop="250dp"
-        android:layout_marginStart="30dp"
         android:background="@android:color/transparent" />
 
     <View
         android:id="@+id/zonePorte"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginStart="530dp"
+        android:layout_width="144dp"
+        android:layout_height="206dp"
+        android:layout_marginStart="500dp"
+        android:layout_marginTop="50dp"
         android:background="@android:color/transparent" />
-
 
     <TextView
         android:id="@+id/inventaireText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_width="117dp"
+        android:layout_height="116dp"
         android:layout_alignParentStart="true"
-        android:layout_margin="16dp"
-        android:text="Inventaire :"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/helpme"
+        android:text="Inventaire : \n"
         android:textColor="#CCCCCC"
-        android:textSize="14sp"
-        android:fontFamily="@font/helpme" />
+        android:textSize="14sp" />
 
 
     <TextView
@@ -81,37 +83,38 @@
         android:fontFamily="@font/helpme" />
 
     <LinearLayout
-    android:id="@+id/inventaireLayout"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="8dp"
-    android:background="@android:color/transparent">
-
-
-    <LinearLayout
-        android:id="@+id/itemCle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:visibility="gone">
-
-        <ImageView
-            android:id="@+id/cleIcon"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/key" />
-
-        <TextView
-            android:id="@+id/cleText"
+        android:id="@+id/inventaireLayout"
+        android:layout_width="122dp"
+        android:layout_height="78dp"
+        android:layout_below="@id/inventaireText"
+        android:layout_alignStart="@id/inventaireText"
+        android:layout_marginTop="-107dp"
+        android:background="@drawable/inventaire_bckgrd"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:visibility="visible">
+        <LinearLayout
+            android:id="@+id/itemCle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Clé"
-            android:paddingStart="16dp"
-            android:textSize="16sp"/>
+            android:orientation="horizontal"
+            android:padding="4dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/cleIcon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:contentDescription="Clé"
+                android:src="@drawable/key" />
+
+
+        </LinearLayout>
+
     </LinearLayout>
 
-</LinearLayout>
+
+
 
 
 </RelativeLayout>

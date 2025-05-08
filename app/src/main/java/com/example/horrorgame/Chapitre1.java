@@ -1,6 +1,7 @@
 package com.example.horrorgame;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -24,6 +25,7 @@ public class Chapitre1 extends Activity {
         inventaireText = findViewById(R.id.inventaireText);
         presenceText = findViewById(R.id.presenceText);
         zoneCommode = findViewById(R.id.zoneCommode);
+        zonePorte = findViewById(R.id.zonePorte);
         inventaireLayout = findViewById(R.id.inventaireLayout);
         itemCle = findViewById(R.id.itemCle);
 
@@ -37,7 +39,8 @@ public class Chapitre1 extends Activity {
 
 
                     itemCle.setVisibility(View.VISIBLE);
-                    inventaireText.setText("Inventaire : Clé rouillée");
+
+
                     aLaCle = true;
 
                 } else {
@@ -51,6 +54,8 @@ public class Chapitre1 extends Activity {
             public void onClick(View v) {
                 if (aLaCle) {
                     dialogueText.setText("La porte est ouverte.");
+                    Intent intent = new Intent(Chapitre1.this, Chapitre2.class);
+                    startActivity(intent);
 
 
                 } else {

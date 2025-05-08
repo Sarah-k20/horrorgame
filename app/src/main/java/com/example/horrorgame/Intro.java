@@ -11,17 +11,17 @@ public class Intro extends Activity {
     private TextView introText;
     private String[] lines = {
             "...",
-            "Silence absolu.",
-            "Vous ouvrez les yeux. L'obscurité vous entoure.",
-            "Un plafond fissuré. Une odeur de poussière et d'humidité.",
-            "Où êtes-vous ?",
-            "Un battement sourd. Ce n’est pas votre cœur.",
-            "Un murmure... ou juste votre imagination ?",
-            "Vous vous redressez lentement.",
-            "Il fait froid. Trop froid.",
-            "Un manoir ? Non... un piège.",
-
+            "Le silence règne, pesant.",
+            "Vous ouvrez les yeux. Quelque chose cloche.",
+            "La chambre est plongée dans une pénombre glaciale.",
+            "Le plafond craque au-dessus de vous. L'air sent la poussière ancienne.",
+            "Vous vous souvenez… Ce manoir appartenait à votre oncle. Mort l'an dernier.",
+            "Il vous l’a légué, seul héritage d'une famille éteinte.",
+            "Hier encore, tout semblait normal.",
+            "Mais cette nuit… quelque chose vous a réveillée.",
+            "Un frisson. Une présence. Vous n’êtes plus seule ici."
     };
+
 
     private int index = 0;
     private Handler handler = new Handler();
@@ -40,7 +40,7 @@ public class Intro extends Activity {
         if (index < lines.length) {
             introText.setText(lines[index]);
             index++;
-            handler.postDelayed(this::showNextLine, 3000); // 2,5 secondes par ligne
+            handler.postDelayed(this::showNextLine, 3000);
         } else {
 
             Intent intent = new Intent(Intro.this, Chapitre1.class);

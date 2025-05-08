@@ -1,0 +1,286 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/corridor2" />
+
+    <TextView
+        android:id="@+id/dialogueText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#AA000000"
+        android:fontFamily="@font/helpme"
+        android:padding="16dp"
+        android:text="..."
+        android:textColor="#FFFFFF"
+        android:textSize="14sp" />
+
+    <View
+        android:id="@+id/zoneportrait1"
+        android:layout_width="69dp"
+        android:layout_height="146dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="50dp"
+        android:background="@android:color/transparent" />
+
+    <View
+        android:id="@+id/zoneportrait2"
+        android:layout_width="49dp"
+        android:layout_height="139dp"
+        android:layout_marginStart="320dp"
+        android:layout_marginTop="150dp"
+        android:background="@android:color/transparent" />
+
+    <View
+        android:id="@+id/zoneportrait3"
+        android:layout_width="35dp"
+        android:layout_height="138dp"
+        android:layout_marginStart="680dp"
+        android:layout_marginTop="100dp"
+        android:background="@android:color/transparent" />
+
+    <View
+        android:id="@+id/zoneporte"
+        android:layout_width="54dp"
+        android:layout_height="260dp"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="100dp"
+        android:background="@android:color/transparent" />
+
+    <TextView
+        android:id="@+id/horloge_heure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="106dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/helpme"
+        android:text="03:10"
+        android:textColor="#CCCC"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/zoomPortrait"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CC000000"
+        android:scaleType="fitCenter"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/clavier"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:background="#AA000000"
+        android:gravity="center">
+
+        <GridLayout
+            android:id="@+id/clavierlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:rowCount="4"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn1"
+                android:text="1"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+            <Button
+                android:id="@+id/btn2"
+                android:text="2"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+            <Button
+                android:id="@+id/btn3"
+                android:text="3"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+            <Button
+                android:id="@+id/btn4"
+                android:text="4"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+            <Button
+                android:id="@+id/btn5"
+                android:text="5"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+            <Button
+                android:id="@+id/btn6"
+                android:text="6"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+            <Button
+                android:id="@+id/btn7"
+                android:text="7"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+            <Button
+                android:id="@+id/btn8"
+                android:text="8"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+            <Button
+                android:id="@+id/btn9"
+                android:text="9"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+            <Button
+                android:id="@+id/btn0"
+                android:text="0"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+            <Button
+                android:id="@+id/btnClear"
+                android:text="C"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+            <Button
+                android:id="@+id/btnEnter"
+                android:text="Entrée"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+
+        </GridLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/indiceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        android:text=""
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_marginStart="16dp"/>
+
+    <LinearLayout
+        android:id="@+id/clavierLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        android:background="#88000000"
+        android:padding="12dp">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:rowCount="4"
+            android:layout_gravity="center">
+
+            <Button android:id="@+id/bouton1" android:text="1" style="@style/ClavierButton"/>
+            <Button android:id="@+id/bouton2" android:text="2" style="@style/ClavierButton"/>
+            <Button android:id="@+id/bouton3" android:text="3" style="@style/ClavierButton"/>
+            <Button android:id="@+id/bouton4" android:text="4" style="@style/ClavierButton"/>
+            <Button android:id="@+id/bouton5" android:text="5" style="@style/ClavierButton"/>
+            <Button android:id="@+id/bouton6" android:text="6" style="@style/ClavierButton"/>
+            <Button android:id="@+id/bouton7" android:text="7" style="@style/ClavierButton"/>
+            <Button android:id="@+id/bouton8" android:text="8" style="@style/ClavierButton"/>
+            <Button android:id="@+id/bouton9" android:text="9" style="@style/ClavierButton"/>
+            <View android:layout_width="0dp" android:layout_height="0dp"/>
+            <Button android:id="@+id/bouton0" android:text="0" style="@style/ClavierButton"/>
+            <View android:layout_width="0dp" android:layout_height="0dp"/>
+
+        </GridLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/jumpscareImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:scaleType="fitXY"
+        android:src="@drawable/jumpsc" />
+
+    <View
+        android:id="@+id/flashView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignEnd="@+id/indiceText"
+        android:layout_marginEnd="16dp"
+        android:background="#FFFFFFFF"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:id="@+id/inventaireLayout"
+        android:layout_width="122dp"
+        android:layout_height="78dp"
+        android:layout_below="@id/inventaireText"
+        android:layout_alignStart="@id/inventaireText"
+        android:layout_marginTop="-107dp"
+        android:background="@drawable/inventaire_bckgrd"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:visibility="visible">
+        <LinearLayout
+            android:id="@+id/itemCle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/cleIcon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:contentDescription="Clé"
+                android:src="@drawable/key" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/inventaireText"
+        android:layout_width="117dp"
+        android:layout_height="116dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/helpme"
+        android:text="Inventaire : \n"
+        android:textColor="#CCCCCC"
+        android:textSize="14sp" />
+
+
+    <TextView
+        android:id="@+id/presenceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:text="Vous êtes seul(e)."
+        android:textColor="#CCCCCC"
+        android:textSize="14sp"
+        android:fontFamily="@font/helpme" />
+
+
+
+
+</RelativeLayout>

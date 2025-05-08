@@ -1,0 +1,9 @@
+<resources>
+    <style name="ClavierButton">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+</resources>

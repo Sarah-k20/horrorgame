@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
         backgroundMusic = MediaPlayer.create(this, R.raw.soundtrack);
         backgroundMusic.setLooping(true);
-        backgroundMusic.setVolume(0.5f, 0.5f);
+        backgroundMusic.setVolume(0.75f, 0.75f);
         backgroundMusic.start();
 
 
