@@ -22,12 +22,13 @@
         android:id="@+id/btn_retour_couloir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Retour"
-        android:layout_margin="16dp"
-        android:background="@drawable/inventaire_bckgrd"
-        android:textColor="@android:color/white"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="15dp"
+        android:backgroundTint="#8A8D8E"
         android:fontFamily="@font/helpme"
-       />
+        android:text="Retour"
+        android:textColor="#000000" />
+
 
 
 
