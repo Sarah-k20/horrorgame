@@ -46,7 +46,7 @@ public class Chapitre2 extends Activity {
             afficherTexte("Regarde bien… Le chiffre des heures et celui des minutes ne s’aiment pas. L’un est plus petit que l’autre.");
         });
         findViewById(R.id.zoneportrait3).setOnClickListener(v -> {
-            afficherTexte("Quand la cloche sonnera, il sera trop tard… Combien de secondes avant la délivrance ?");
+            afficherTexte("Quand le passé devient le futur, les aiguilles s’inversent…");
             mediaPlayer.start();
             mediaPlayer.setVolume(1f, 1f);
 
@@ -120,7 +120,7 @@ public class Chapitre2 extends Activity {
         });
 
         btnEnter.setOnClickListener(v -> {
-            if ("71050".equals(enteredCode)) {
+            if ("71003".equals(enteredCode)) {
                 codeTrouve = true;
                 keyboardLayout.setVisibility(View.GONE);
                 afficherTexte("La porte s’ouvre lentement… Vous pouvez avancer.");
