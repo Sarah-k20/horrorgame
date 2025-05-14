@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/coffreff"
+        android:layout_width="364dp"
+        android:layout_height="710dp"
+        android:src="@drawable/coffreff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <Button
+        android:id="@+id/btn00"
+        android:layout_width="53dp"
+        android:layout_height="43dp"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="63dp"
+        tools:layout_editor_absoluteY="344dp" />
+
+    <Button
+        android:id="@+id/btn01"
+        android:layout_width="59dp"
+        android:layout_height="41dp"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="345dp" />
+
+    <Button
+        android:id="@+id/btn02"
+        android:layout_width="52dp"
+        android:layout_height="42dp"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="191dp"
+        tools:layout_editor_absoluteY="344dp" />
+
+    <Button
+        android:id="@+id/btn10"
+        android:layout_width="57dp"
+        android:layout_height="36dp"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="395dp" />
+
+    <Button
+        android:id="@+id/btn11"
+        android:layout_width="62dp"
+        android:layout_height="40dp"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="125dp"
+        tools:layout_editor_absoluteY="394dp" />
+
+    <Button
+        android:id="@+id/btn12"
+        android:layout_width="63dp"
+        android:layout_height="41dp"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="189dp"
+        tools:layout_editor_absoluteY="389dp" />
+
+    <Button
+        android:id="@+id/btn20"
+        android:layout_width="57dp"
+        android:layout_height="38dp"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="446dp" />
+
+    <Button
+        android:id="@+id/btn21"
+        android:layout_width="61dp"
+        android:layout_height="37dp"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="125dp"
+        tools:layout_editor_absoluteY="446dp" />
+
+    <!-- Bouton Reset -->
+
+    <Button
+        android:id="@+id/btn22"
+        android:layout_width="64dp"
+        android:layout_height="41dp"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="188dp"
+        tools:layout_editor_absoluteY="446dp" />
+
+    <Button
+        android:id="@+id/resetBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_retour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retour"
+        android:layout_margin="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/holo_red_light"
+        android:textColor="@android:color/white"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
