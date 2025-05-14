@@ -46,24 +46,23 @@ public class Chapitre2 extends Activity {
         });
         findViewById(R.id.zoneportrait3).setOnClickListener(v -> {
             afficherTexte("Quand la cloche sonnera, il sera trop tard… Combien de secondes avant la délivrance ?");
-
-
             mediaPlayer.start();
             mediaPlayer.setVolume(1f, 1f);
-            new Handler().postDelayed(() -> {
 
-                flashView.setVisibility(View.VISIBLE);
+            flashView.setVisibility(View.VISIBLE);
+
+
+            new Handler().postDelayed(() -> {
                 AlphaAnimation flash = new AlphaAnimation(1.0f, 0.0f);
                 flash.setDuration(200);
                 flash.setFillAfter(true);
                 flashView.startAnimation(flash);
-            }, 500);
+            }, 50);
 
 
             new Handler().postDelayed(() -> {
-
                 flashView.setVisibility(View.GONE);
-            }, 1000);
+            }, 800);
         });
 
 

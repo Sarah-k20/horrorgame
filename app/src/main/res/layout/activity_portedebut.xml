@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/root_layout"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/doorclosed" />
+
+    <TextView
+        android:id="@+id/dialogueText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#AA000000"
+        android:fontFamily="@font/helpme"
+        android:padding="16dp"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/horloge_heure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="106dp"
+        android:layout_marginTop="374dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/helpme"
+        android:text="22:34"
+        android:textColor="#CCCC"
+        android:textSize="20sp" />
+
+    <View
+        android:id="@+id/zonePorte"
+        android:layout_width="193dp"
+        android:layout_height="334dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="50dp"
+        android:background="@android:color/transparent" />
+
+    <ImageView
+        android:id="@+id/porteouverte"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:scaleType="fitXY"
+        android:src="@drawable/dooropen" />
+
+
+</RelativeLayout>
