@@ -32,6 +32,7 @@ public class Chapitre2 extends Activity {
 
 
         keyboardLayout = findViewById(R.id.clavier);
+        View inventairelayout = findViewById(R.id.inventaireLayout);
         dialogueText = findViewById(R.id.dialogueText);
 
         keyboardLayout.setVisibility(View.GONE);
@@ -40,18 +41,20 @@ public class Chapitre2 extends Activity {
 
 
         findViewById(R.id.zoneportrait1).setOnClickListener(v -> {
-            afficherTexte("Le tic-tac s’est arrêté… Il est toujours 03:10. Toujours.");
+            afficherTexte("Le tic-tac s’est arrêté… Il est 03:10.");
         });
 
         findViewById(R.id.zoneportrait2).setOnClickListener(v -> {
             afficherTexte("Regarde bien… Le chiffre des heures et celui des minutes ne s’aiment pas. L’un est plus petit que l’autre.");
-        });
+        }); // on attend le chiffre 7 : 10-03 =7
         findViewById(R.id.zoneportrait3).setOnClickListener(v -> {
-            afficherTexte("Quand le passé devient le futur, les aiguilles s’inversent…");
+            afficherTexte("Quand le passé devient le futur, les aiguilles de l'horloge s’inversent…");
+            // Si une horloge est reglé à 03:10, en inversant les deux aiguilles on lit mtn 02:15
             mediaPlayer.start();
             mediaPlayer.setVolume(1f, 1f);
 
             flashView.setVisibility(View.VISIBLE);
+            inventairelayout.setVisibility(View.GONE);
 
 
             new Handler().postDelayed(() -> {
@@ -64,6 +67,8 @@ public class Chapitre2 extends Activity {
 
             new Handler().postDelayed(() -> {
                 flashView.setVisibility(View.GONE);
+                inventairelayout.setVisibility(View.VISIBLE);
+
             }, 800);
         });
 
@@ -73,7 +78,7 @@ public class Chapitre2 extends Activity {
         findViewById(R.id.zoneporte).setOnClickListener(v -> {
             if (!codeTrouve) {
                 keyboardLayout.setVisibility(View.VISIBLE);
-                afficherTexte("Entrez le code à 5 chiffres.");
+                afficherTexte("Entrez le code à 5 chiffres : ");
             }
         });
 
@@ -130,7 +135,8 @@ public class Chapitre2 extends Activity {
 
 
         btnEnter.setOnClickListener(v -> {
-            if ("71003".equals(enteredCode)) {
+            if ("70215".equals(enteredCode)) //j'ai changé pour que ce soit plus compliqué
+                {
                 codeTrouve = true;
                 keyboardLayout.setVisibility(View.GONE);
                 afficherTexte("La porte s’ouvre lentement… Vous pouvez avancer.");

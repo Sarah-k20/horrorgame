@@ -1,5 +1,7 @@
 package com.example.horrorgame;
 
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,9 +20,7 @@ public class Enigme1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enigme1);
 
-
         coffreImage = findViewById(R.id.coffreff);
-
 
         String[] ids = {
                 "btn00", "btn01", "btn02",
@@ -43,14 +43,13 @@ public class Enigme1 extends AppCompatActivity {
             }
         }
 
-        // Bouton reset
+
         Button resetBtn = findViewById(R.id.Reset_btn);
         resetBtn.setOnClickListener(v -> reset());
         Button btnRetour = findViewById(R.id.btn_retour);
-        btnRetour.setOnClickListener(v -> finish()); // Ferme l'activité actuelle et revient à la précédente
+        btnRetour.setOnClickListener(v -> finish());
 
-
-        updateUI(); // état initial
+        updateUI();
     }
 
     private void toggle(int i, int j) {
@@ -70,9 +69,9 @@ public class Enigme1 extends AppCompatActivity {
     private void updateUI() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                buttons[i][j].setBackgroundResource(
-                        states[i][j] ? R.drawable.casenoir : R.drawable.caseb
-                );
+
+                int color = states[i][j] ? Color.BLACK : Color.WHITE;
+                buttons[i][j].setBackgroundTintList(ColorStateList.valueOf(color));
             }
         }
     }
@@ -98,8 +97,5 @@ public class Enigme1 extends AppCompatActivity {
         }
         coffreImage.setImageResource(R.drawable.coffreff);
         updateUI();
-
-
-
     }
 }

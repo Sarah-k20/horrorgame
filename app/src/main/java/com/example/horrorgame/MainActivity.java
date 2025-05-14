@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
         btnNewGame.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, Intro.class);
+            Intent intent = new Intent(MainActivity.this, Enigme1.class);
             startActivity(intent);
         });
 

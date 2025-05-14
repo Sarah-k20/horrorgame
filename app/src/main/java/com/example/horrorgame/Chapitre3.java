@@ -22,6 +22,7 @@ public class Chapitre3 extends AppCompatActivity {
         btnCoffre.setOnClickListener(v -> {
             Intent intent = new Intent(Chapitre3.this, Enigme1.class);
             startActivity(intent);
+            finish();
         });
         Button btnRetourCouloir = findViewById(R.id.btn_retour_couloir);
         btnRetourCouloir.setOnClickListener(v -> {

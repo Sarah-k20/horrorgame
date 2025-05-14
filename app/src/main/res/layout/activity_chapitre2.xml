@@ -68,13 +68,7 @@
         android:textColor="#CCCC"
         android:textSize="20sp" />
 
-    <ImageView
-        android:id="@+id/zoomPortrait"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#CC000000"
-        android:scaleType="fitCenter"
-        android:visibility="gone" />
+
 
     <LinearLayout
         android:id="@+id/clavier"
@@ -216,22 +210,15 @@
         </GridLayout>
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/jumpscareImage"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone"
-        android:scaleType="fitXY"
-        android:src="@drawable/jumpsc" />
 
-    <View
+    <ImageView
         android:id="@+id/flashView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignEnd="@+id/indiceText"
-        android:layout_marginEnd="16dp"
+        android:scaleType="centerCrop"
         android:background="#FFFFFFFF"
-        android:visibility="gone" />
+        android:visibility="gone"
+         />
 
 
     <LinearLayout
