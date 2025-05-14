@@ -1,6 +1,7 @@
 package com.example.horrorgame;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.TextView;
@@ -42,6 +43,11 @@ public class Debutexplication extends AppCompatActivity {
             handler.postDelayed(this::showNextLine, 5500);
         } else {
             Intent intent = new Intent(this, Chapitre1.class);
+            SharedPreferences prefs = getSharedPreferences("GamePrefs", MODE_PRIVATE);
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putInt("dernierChapitre", 1);
+            editor.apply();
+
             startActivity(intent);
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
             finish();

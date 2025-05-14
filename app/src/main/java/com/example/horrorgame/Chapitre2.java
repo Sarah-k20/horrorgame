@@ -2,6 +2,7 @@ package com.example.horrorgame;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -77,6 +78,8 @@ public class Chapitre2 extends Activity {
         });
 
         initKeyboard();
+
+
     }
 
     private void afficherTexte(String texte) {
@@ -96,6 +99,7 @@ public class Chapitre2 extends Activity {
         Button btn0 = findViewById(R.id.btn0);
         Button btnClear = findViewById(R.id.btnClear);
         Button btnEnter = findViewById(R.id.btnEnter);
+
 
         View.OnClickListener digitClickListener = v -> {
             if (enteredCode.length() < 5) {
@@ -118,12 +122,23 @@ public class Chapitre2 extends Activity {
             enteredCode = "";
             afficherTexte("Code effacé.");
         });
+        Button btnRetour = findViewById(R.id.btnRetour);
+        btnRetour.setOnClickListener(v -> {
+            keyboardLayout.setVisibility(View.GONE);
+            afficherTexte("Clavier fermé.");
+        });
+
 
         btnEnter.setOnClickListener(v -> {
             if ("71003".equals(enteredCode)) {
                 codeTrouve = true;
                 keyboardLayout.setVisibility(View.GONE);
                 afficherTexte("La porte s’ouvre lentement… Vous pouvez avancer.");
+                SharedPreferences prefs = getSharedPreferences("GamePrefs", MODE_PRIVATE);
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.putInt("dernierChapitre", 3);
+                editor.apply();
+
                 Intent intent = new Intent(this, Chapitre3.class);
                 startActivity(intent);
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);

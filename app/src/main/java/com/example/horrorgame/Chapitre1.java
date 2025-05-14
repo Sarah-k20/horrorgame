@@ -2,6 +2,7 @@ package com.example.horrorgame;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -55,6 +56,11 @@ public class Chapitre1 extends Activity {
                 if (aLaCle) {
                     dialogueText.setText("La porte est ouverte.");
                     Intent intent = new Intent(Chapitre1.this, Chapitre2.class);
+                    SharedPreferences prefs = getSharedPreferences("GamePrefs", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = prefs.edit();
+                    editor.putInt("dernierChapitre", 2);
+                    editor.apply();
+
                     startActivity(intent);
 
 

@@ -22,7 +22,7 @@ public class parametres extends AppCompatActivity {
         seekBarVolume = findViewById(R.id.seekBarVolume);
         btnRetour = findViewById(R.id.btnRetour);
 
-        // 🎧 Initialisation AudioManager pour gérer le volume système
+
         audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
 
         int maxVolume = audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
@@ -31,7 +31,7 @@ public class parametres extends AppCompatActivity {
         seekBarVolume.setMax(maxVolume);
         seekBarVolume.setProgress(currentVolume);
 
-        // 📉 Quand on change la position de la SeekBar
+
         seekBarVolume.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -42,9 +42,9 @@ public class parametres extends AppCompatActivity {
             @Override public void onStopTrackingTouch(SeekBar seekBar) {}
         });
 
-        // 🔙 Action du bouton Retour
+
         btnRetour.setOnClickListener(v -> {
-            finish(); // Ferme l'activité et revient au menu
+            finish();
         });
     }
 }

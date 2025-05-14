@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -7,89 +9,108 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
+
     <ImageView
         android:id="@+id/coffreff"
-        android:layout_width="364dp"
-        android:layout_height="710dp"
+        android:layout_width="457dp"
+        android:layout_height="334dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="8dp"
         android:src="@drawable/coffreff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-
 
     <Button
         android:id="@+id/btn00"
         android:layout_width="53dp"
         android:layout_height="43dp"
+        android:layout_marginStart="216dp"
+        android:layout_marginTop="160dp"
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="63dp"
-        tools:layout_editor_absoluteY="344dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn01"
         android:layout_width="59dp"
         android:layout_height="41dp"
+        android:layout_marginStart="272dp"
+        android:layout_marginTop="164dp"
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="124dp"
-        tools:layout_editor_absoluteY="345dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn02"
         android:layout_width="52dp"
         android:layout_height="42dp"
+        android:layout_marginStart="328dp"
+        android:layout_marginTop="160dp"
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="191dp"
-        tools:layout_editor_absoluteY="344dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn10"
         android:layout_width="57dp"
         android:layout_height="36dp"
+        android:layout_marginStart="216dp"
+        android:layout_marginTop="204dp"
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="59dp"
-        tools:layout_editor_absoluteY="395dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Bouton Reset -->
 
     <Button
         android:id="@+id/btn11"
-        android:layout_width="62dp"
-        android:layout_height="40dp"
+        android:layout_width="55dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="276dp"
+        android:layout_marginTop="204dp"
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="125dp"
-        tools:layout_editor_absoluteY="394dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn12"
-        android:layout_width="63dp"
-        android:layout_height="41dp"
+        android:layout_width="49dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="328dp"
+        android:layout_marginTop="204dp"
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="189dp"
-        tools:layout_editor_absoluteY="389dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn20"
         android:layout_width="57dp"
         android:layout_height="38dp"
+        android:layout_marginStart="216dp"
+        android:layout_marginTop="244dp"
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="59dp"
-        tools:layout_editor_absoluteY="446dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn21"
         android:layout_width="61dp"
         android:layout_height="37dp"
+        android:layout_marginStart="272dp"
+        android:layout_marginTop="244dp"
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="125dp"
-        tools:layout_editor_absoluteY="446dp" />
-
-    <!-- Bouton Reset -->
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn22"
-        android:layout_width="64dp"
-        android:layout_height="41dp"
+        android:layout_width="53dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="324dp"
+        android:layout_marginTop="248dp"
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="188dp"
-        tools:layout_editor_absoluteY="446dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/resetBtn"
@@ -105,12 +126,18 @@
         android:id="@+id/btn_retour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Retour"
-        android:layout_margin="16dp"
-        android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:background="@android:color/holo_red_light"
-        android:textColor="@android:color/white"/>
+        android:layout_alignParentTop="true"
+        android:layout_margin="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:text="Retour"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
