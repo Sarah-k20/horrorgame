@@ -42,30 +42,10 @@
             android:thumbTint="#FF0000" />
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/helpme"
-            android:text="Contrôles :"
-            android:textColor="#dddddd"
-            android:textSize="18sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginTop="6dp"
-            android:fontFamily="@font/helpme"
-            android:text="Utilisez le joystick à l'écran pour déplacer votre personnage.\nGlissez votre doigt dans la direction souhaitée."
-            android:textColor="#bbbbbb"
-            android:textSize="14sp" />
 
-        <ImageView
-            android:layout_width="71dp"
-            android:layout_height="34dp"
-            android:layout_gravity="start"
-            android:layout_marginTop="12dp"
-            android:contentDescription="joystick"
-            android:src="@drawable/joystick" />
+
+
 
         <Button
             android:id="@+id/btnRetour"

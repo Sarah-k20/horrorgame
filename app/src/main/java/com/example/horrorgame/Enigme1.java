@@ -44,7 +44,7 @@ public class Enigme1 extends AppCompatActivity {
         }
 
         // Bouton reset
-        Button resetBtn = findViewById(R.id.resetBtn);
+        Button resetBtn = findViewById(R.id.Reset_btn);
         resetBtn.setOnClickListener(v -> reset());
         Button btnRetour = findViewById(R.id.btn_retour);
         btnRetour.setOnClickListener(v -> finish()); // Ferme l'activité actuelle et revient à la précédente
