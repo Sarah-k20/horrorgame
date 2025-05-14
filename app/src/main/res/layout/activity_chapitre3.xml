@@ -24,9 +24,12 @@
         android:layout_height="wrap_content"
         android:text="Retour"
         android:layout_margin="16dp"
-        android:background="@android:color/holo_red_dark"
+        android:background="@drawable/inventaire_bckgrd"
         android:textColor="@android:color/white"
+        android:fontFamily="@font/helpme"
        />
+
+
 
 
 
