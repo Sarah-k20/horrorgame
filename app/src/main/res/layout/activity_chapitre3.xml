@@ -3,14 +3,13 @@
     android:layout_height="match_parent">
 
 
-    <View
+    <Button
         android:id="@+id/btn_coffre"
-        android:layout_width="136dp"
-        android:layout_height="410dp"
-        android:layout_marginStart="700dp"
-        android:layout_marginTop="50dp"
+        android:layout_width="103dp"
+        android:layout_height="225dp"
+        android:layout_marginStart="500dp"
+        android:layout_marginTop="30dp"
         android:background="@android:color/transparent" />
-
 
     <ImageView
         android:id="@+id/backgroundImage"
