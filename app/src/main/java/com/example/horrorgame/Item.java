@@ -1,19 +1,43 @@
 package com.example.horrorgame;
 
 public class Item {
-    //atributs
-    Boolean key;
-    Boolean usable;
-    Boolean readable;
+    private String nom;
+    private double poids;
+    private boolean empilable;
 
-    //methodes
-
-    public Item(boolean key, boolean usable, boolean readable){
-        super();
-        this.key = key;
-        this.usable = usable;
-        this.readable = readable;
+    public Item(String nom, double poids, boolean empilable) {
+        this.nom = nom;
+        this.poids = poids;
+        this.empilable = empilable;
     }
 
+    public String getNom() {
+        return nom;
+    }
 
+    public double getPoids() {
+        return poids;
+    }
+
+    public boolean estEmpilable() {
+        return empilable;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof Item)) return false;
+        Item autre = (Item) obj;
+        return nom.equals(autre.nom);
+    }
+
+    @Override
+    public int hashCode() {
+        return nom.hashCode();
+    }
+
+    @Override
+    public String toString() {
+        return nom;
+    }
 }

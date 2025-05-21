@@ -1,21 +1,53 @@
 package com.example.horrorgame;
 
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Inventory {
-    //atribut
-    ArrayList<Item> inv1 = new ArrayList<Item>();
-    ArrayList<Item> inv2 = new ArrayList<Item>();
+    private Map<Item, Integer> items = new HashMap<>();
+    private double poidsMax = 50.0;
 
-    // methodes
+    public boolean ajouter(Item item, int quantite) {
+        double nouveauPoids = getPoidsTotal() + item.getPoids() * quantite;
 
-    public Inventory(ArrayList<Item> inv1,ArrayList<Item> inv2){
-        super();
-        this.inv1 = inv1;
-        this.inv2 = inv2;
+        if (nouveauPoids > poidsMax) {
+            return false;
+        }
+
+        if (item.estEmpilable()) {
+            items.put(item, items.getOrDefault(item, 0) + quantite);
+        } else {
+            for (int i = 0; i < quantite; i++) {
+                items.put(item, items.getOrDefault(item, 0) + 1);
+            }
+        }
+        return true;
     }
 
-    public void addItem(ArrayList<Item> inv, Item obj){
-        inv.add(obj);
+    public boolean retirer(Item item, int quantite) {
+        if (!items.containsKey(item)) return false;
+        int actuelle = items.get(item);
+        if (quantite >= actuelle) {
+            items.remove(item);
+        } else {
+            items.put(item, actuelle - quantite);
+        }
+        return true;
+    }
+
+    public Map<Item, Integer> getItems() {
+        return items;
+    }
+
+    public double getPoidsTotal() {
+        double total = 0;
+        for (Map.Entry<Item, Integer> entry : items.entrySet()) {
+            total += entry.getKey().getPoids() * entry.getValue();
+        }
+        return total;
+    }
+
+    public double getPoidsMax() {
+        return poidsMax;
     }
 }
